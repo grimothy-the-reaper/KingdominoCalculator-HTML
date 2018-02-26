@@ -1,0 +1,8 @@
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\bin\KingdominoCalculator.dll.config
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\bin\KingdominoCalculator.dll
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\bin\KingdominoCalculator.pdb
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\obj\Release\KingdominoCalculator.csproj.CoreCompileInputs.cache
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\obj\Release\KingdominoCalculator.dll
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\obj\Release\KingdominoCalculator.pdb

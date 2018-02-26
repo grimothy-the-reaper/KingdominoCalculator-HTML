@@ -1,0 +1,53 @@
+﻿body {
+    background-color: #ECECEA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+}
+
+.content {
+    margin: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.input-number {
+    text-align: right;
+    font-size: inherit !important;
+    border-radius: 0 !important;
+    height: auto !important;
+}
+
+.img-border {
+    border: 2px black solid;
+}
+
+.row {
+    border-bottom: 1px #DCDCDA solid;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-group {
+    margin-top: 15px;
+}
+
+.btn-calc {
+    border-radius: 0 !important;
+    padding: 40px;
+}
+
+.btn-plus {
+    border-top: 3px solid #73B8CB;
+    border-left: 2px solid #C1C1BC;
+    border-right: 3px solid #73B8CB;
+    border-bottom: 3px solid #73B8CB;
+}
+
+.btn-minus {
+    border-top: 3px solid #A13A57;
+    border-left: 3px solid #A13A57;
+    border-right: 2px solid #C1C1BC;
+    border-bottom: 3px solid #A13A57;
+}
