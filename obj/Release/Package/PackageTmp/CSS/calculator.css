@@ -1,11 +1,14 @@
 ﻿body {
     background-color: #ECECEA;
     font-family: 'Montserrat', sans-serif;
-    font-size: 4em;
+    font-size: 6em;
 }
 
 .content {
-    margin: 10px;
+    margin-top: 110px;
+    margin-bottom: 110px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .center {
@@ -21,33 +24,38 @@
 
 .img-border {
     border: 2px black solid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.row {
-    border-bottom: 1px #DCDCDA solid;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+.terrain-group {
+    border-bottom: #C1C1BC 3px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-group {
     margin-top: 15px;
+    width: 100%;
 }
 
 .btn-calc {
     border-radius: 0 !important;
-    padding: 40px;
+    width: 50%;
+    font-size: 1.5em;
+    color: white !important;
 }
 
 .btn-plus {
-    border-top: 3px solid #73B8CB;
-    border-left: 2px solid #C1C1BC;
-    border-right: 3px solid #73B8CB;
-    border-bottom: 3px solid #73B8CB;
+    background-color: #3cb371;
+    border-top: 3px solid #0D8541;
+    border-right: 3px solid #0D8541;
+    border-bottom: 3px solid #0D8541;
 }
 
 .btn-minus {
-    border-top: 3px solid #A13A57;
-    border-left: 3px solid #A13A57;
-    border-right: 2px solid #C1C1BC;
-    border-bottom: 3px solid #A13A57;
+    background-color: #FB7754;
+    border-top: 3px solid #BA3512;
+    border-left: 3px solid #BA3512;
+    border-bottom: 3px solid #BA3512;
 }

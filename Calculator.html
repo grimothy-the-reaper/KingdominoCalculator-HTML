@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Calculator</title>
+    <meta name="apple-mobile-web-app-title" content="Kingdomino">
+    <title>Kingdomino Calculator</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="CSS/calculator.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,220 +21,268 @@
     <script src="Scripts/Calculator.js"></script>
     <div class="content">
         <div class="row">
-            <div class="col-xs-3">
-                <img src="Images/Field.jpg" alt="Field" class="img-responsive img-border" />
-            </div>
-            <div class="col-xs-3 center">
-                Tiles
-                <br />
-                <span id="input-field-tile">0</span>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('field', 'tile');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('field', 'tile');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
+            <div class="col-xs-1"></div>
+            <div id="field" class="col-xs-10 terrain-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="Images/Field.jpg" alt="Field" class="img-responsive img-border" />
+                    </div>
+                    <div class="col-xs-6 center">
+                        Score
+                        <br />
+                        <span id="total-field">0</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 center">
+                        Tiles
+                        <br />
+                        <span id="input-field-tile">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('field', 'tile');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('field', 'tile');">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 center">
+                        Crowns
+                        <br />
+                        <span id="input-field-crown">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('field', 'crown');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('field', 'crown');">
+                                +
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-3 center">
-                Crowns
-                <br />
-                <span id="input-field-crown">0</span>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('field', 'crown');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('field', 'crown');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-xs-3 center">
-                Score
-                <br />
-                <span id="total-field">0</span>
-            </div>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row">
-            <div class="col-xs-3">
-                <img src="Images/Forest.jpg" alt="Field" class="img-responsive img-border" />
-            </div>
-            <div class="col-xs-3 center">
-                Tiles
-                <br />
-                <input type="number" id="input-forest-tile" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('forest', 'tile');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('forest', 'tile');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
+            <div class="col-xs-1"></div>
+            <div id="forest" class="col-xs-10 terrain-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="Images/forest.jpg" alt="forest" class="img-responsive img-border" />
+                    </div>
+                    <div class="col-xs-6 center">
+                        Score
+                        <br />
+                        <span id="total-forest">0</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 center">
+                        Tiles
+                        <br />
+                        <span id="input-forest-tile">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('forest', 'tile');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('forest', 'tile');">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 center">
+                        Crowns
+                        <br />
+                        <span id="input-forest-crown">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('forest', 'crown');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('forest', 'crown');">
+                                +
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-3 center">
-                Crowns
-                <br />
-                <input type="number" id="input-forest-crown" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('forest', 'crown');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('forest', 'crown');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-xs-3 center">
-                Score
-                <br />
-                <span id="total-forest">0</span>
-            </div>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row">
-            <div class="col-xs-3">
-                <img src="Images/Gold.jpg" alt="Field" class="img-responsive img-border" />
-            </div>
-            <div class="col-xs-3 center">
-                Tiles
-                <br />
-                <input type="number" id="input-gold-tile" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('gold', 'tile');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('gold', 'tile');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
+            <div class="col-xs-1"></div>
+            <div id="gold" class="col-xs-10 terrain-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="Images/gold.jpg" alt="gold" class="img-responsive img-border" />
+                    </div>
+                    <div class="col-xs-6 center">
+                        Score
+                        <br />
+                        <span id="total-gold">0</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 center">
+                        Tiles
+                        <br />
+                        <span id="input-gold-tile">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('gold', 'tile');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('gold', 'tile');">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 center">
+                        Crowns
+                        <br />
+                        <span id="input-gold-crown">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('gold', 'crown');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('gold', 'crown');">
+                                +
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-3 center">
-                Crowns
-                <br />
-                <input type="number" id="input-gold-crown" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('gold', 'crown');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('gold', 'crown');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-xs-3 center">
-                Score
-                <br />
-                <span id="total-gold">0</span>
-            </div>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row">
-            <div class="col-xs-3">
-                <img src="Images/Grass.jpg" alt="Field" class="img-responsive img-border" />
-            </div>
-            <div class="col-xs-3 center">
-                Tiles
-                <br />
-                <input type="number" id="input-grass-tile" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('grass', 'tile');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('grass', 'tile');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
+            <div class="col-xs-1"></div>
+            <div id="grass" class="col-xs-10 terrain-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="Images/grass.jpg" alt="grass" class="img-responsive img-border" />
+                    </div>
+                    <div class="col-xs-6 center">
+                        Score
+                        <br />
+                        <span id="total-grass">0</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 center">
+                        Tiles
+                        <br />
+                        <span id="input-grass-tile">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('grass', 'tile');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('grass', 'tile');">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 center">
+                        Crowns
+                        <br />
+                        <span id="input-grass-crown">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('grass', 'crown');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('grass', 'crown');">
+                                +
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-3 center">
-                Crowns
-                <br />
-                <input type="number" id="input-grass-crown" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('grass', 'crown');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('grass', 'crown');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-xs-3 center">
-                Score
-                <br />
-                <span id="total-grass">0</span>
-            </div>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row">
-            <div class="col-xs-3">
-                <img src="Images/Waste.jpg" alt="Field" class="img-responsive img-border" />
-            </div>
-            <div class="col-xs-3 center">
-                Tiles
-                <br />
-                <input type="number" id="input-waste-tile" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('waste', 'tile');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('waste', 'tile');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
+            <div class="col-xs-1"></div>
+            <div id="waste" class="col-xs-10 terrain-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="Images/waste.jpg" alt="waste" class="img-responsive img-border" />
+                    </div>
+                    <div class="col-xs-6 center">
+                        Score
+                        <br />
+                        <span id="total-waste">0</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 center">
+                        Tiles
+                        <br />
+                        <span id="input-waste-tile">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('waste', 'tile');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('waste', 'tile');">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 center">
+                        Crowns
+                        <br />
+                        <span id="input-waste-crown">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('waste', 'crown');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('waste', 'crown');">
+                                +
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-3 center">
-                Crowns
-                <br />
-                <input type="number" id="input-waste-crown" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('waste', 'crown');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('waste', 'crown');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-xs-3 center">
-                Score
-                <br />
-                <span id="total-waste">0</span>
-            </div>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row">
-            <div class="col-xs-3">
-                <img src="Images/Water.jpg" alt="Field" class="img-responsive img-border" />
-            </div>
-            <div class="col-xs-3 center">
-                Tiles
-                <br />
-                <input type="number" id="input-water-tile" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('water', 'tile');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('water', 'tile');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
+            <div class="col-xs-1"></div>
+            <div id="water" class="col-xs-10 terrain-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img src="Images/water.jpg" alt="water" class="img-responsive img-border" />
+                    </div>
+                    <div class="col-xs-6 center">
+                        Score
+                        <br />
+                        <span id="total-water">0</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 center">
+                        Tiles
+                        <br />
+                        <span id="input-water-tile">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('water', 'tile');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('water', 'tile');">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 center">
+                        Crowns
+                        <br />
+                        <span id="input-water-crown">0</span>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-calc btn-minus center" onclick="Decrement('water', 'crown');">
+                                –
+                            </button>
+                            <button type="button" class="btn btn-calc btn-plus center" onclick="Increment('water', 'crown');">
+                                +
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-3 center">
-                Crowns
-                <br />
-                <input type="number" id="input-water-crown" class="form-control input-number" value="0" />
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-calc btn-minus" onclick="Decrement('water', 'crown');">
-                        <img src="Images/minus.svg" class="img-responsive" />
-                    </button>
-                    <button type="button" class="btn btn-calc btn-plus" onclick="Increment('water', 'crown');">
-                        <img src="Images/plus.svg" class="img-responsive" />
-                    </button>
-                </div>
-            </div>
-            <div class="col-xs-3 center">
-                Score
-                <br />
-                <span id="total-water">0</span>
-            </div>
+            <div class="col-xs-1"></div>
         </div>
         <div class="row">
             <div class="col-xs-12 center">

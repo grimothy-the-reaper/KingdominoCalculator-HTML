@@ -69,6 +69,7 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\KingdominoCalculator - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\KingdominoCalculator - Web Deploy.pubxml" />
+    <Content Include="site.webmanifest" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -77,8 +78,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="android-chrome-192x192.png" />
+    <Content Include="android-chrome-256x256.png" />
+    <Content Include="apple-touch-icon-120x120.png" />
+    <Content Include="apple-touch-icon-152x152.png" />
+    <Content Include="apple-touch-icon-180x180.png" />
+    <Content Include="apple-touch-icon-60x60.png" />
+    <Content Include="apple-touch-icon-76x76.png" />
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="browserconfig.xml" />
     <Content Include="Calculator.html" />
     <Content Include="CSS\calculator.css" />
+    <Content Include="favicon-16x16.png" />
+    <Content Include="favicon-32x32.png" />
+    <Content Include="favicon.ico" />
     <Content Include="Images\Field.jpg" />
     <Content Include="Images\Forest.jpg" />
     <Content Include="Images\Gold.jpg" />
@@ -87,6 +100,8 @@
     <Content Include="Images\plus.svg" />
     <Content Include="Images\Waste.jpg" />
     <Content Include="Images\Water.jpg" />
+    <Content Include="mstile-150x150.png" />
+    <Content Include="safari-pinned-tab.svg" />
     <Content Include="Scripts\Calculator.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +112,10 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

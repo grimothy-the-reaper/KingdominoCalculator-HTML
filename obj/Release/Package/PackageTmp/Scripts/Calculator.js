@@ -1,46 +1,46 @@
 ﻿function Increment(terrain, type) {
-    var input = '#input-' + terrain + '-' + type;
-    $(input).val(GetCurrentValue(terrain, type) + 1);
+    var control = '#input-' + terrain + '-' + type;
+    var newVal = GetInputValue(terrain, type) + 1;
+    SetText(control, newVal);
     GetTotal(terrain);
 }
 
 function Decrement(terrain, type) {
-    var input = '#input-' + terrain + '-' + type;
-    if (GetCurrentValue(terrain, type) === 0) {
-        $(input).val(0);
-    }
-    else {
-        $(input).val(GetCurrentValue(terrain, type) - 1);
-    }
+    var control = '#input-' + terrain + '-' + type;
+    var newVal = GetInputValue(terrain, type) === 0 ? 0 : GetInputValue(terrain, type) - 1;
+    SetText(control, newVal);
     GetTotal(terrain);
 }
 
-function GetCurrentValue(terrain, type) {
-    return GetInt('#input-' + terrain + '-' + type);
-}
-
 function GetTotal(terrain) {
-    var total = '#total-' + terrain;
-    $(total).text(GetCurrentValue(terrain, 'tile') * GetCurrentValue(terrain, 'crown'));
+    var control = '#total-' + terrain;
+    var newVal = GetInputValue(terrain, 'tile') * GetInputValue(terrain, 'crown');
+    SetText(control, newVal);
     GetGrandTotal();
 }
 
 function GetGrandTotal() {
-    var temp = GetCurrentGrandTotalValue();
-    $('span[id^="total"]').each(function () {
-        temp += parseInt($(this).text())
-    });
-    $('#grand-total').text(temp);
+    var temp = 0;
+    temp += GetInt('#total-field');
+    temp += GetInt('#total-forest');
+    temp += GetInt('#total-gold');
+    temp += GetInt('#total-grass');
+    temp += GetInt('#total-waste');
+    temp += GetInt('#total-water');
+    SetText('#grand-total', temp);
 }
 
-function GetCurrentGrandTotalValue() {
-    var input = '#grand-total';
-    return GetInt('#grand-total');
+function SetText(control, text) {
+    $(control).text(text);
+}
+
+function GetInputValue(terrain, type) {
+    return GetInt('#input-' + terrain + '-' + type);
 }
 
 function GetInt(control) {
-    if (!$.isNumeric($(control).val())) {
+    if (!$.isNumeric($(control).text())) {
         return 0;
     }
-    return parseInt($(control).val());
+    return parseInt($(control).text());
 }

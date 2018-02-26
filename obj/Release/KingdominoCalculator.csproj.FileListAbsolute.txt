@@ -6,3 +6,4 @@ C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\Kingd
 C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\obj\Release\KingdominoCalculator.csproj.CoreCompileInputs.cache
 C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\obj\Release\KingdominoCalculator.dll
 C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\obj\Release\KingdominoCalculator.pdb
+C:\Users\SEXTON\Documents\Visual Studio 2017\Projects\KingdominoCalculator\KingdominoCalculator\obj\Release\KingdominoCalculator.csprojResolveAssemblyReference.cache
